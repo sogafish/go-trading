@@ -134,6 +134,7 @@ func (t *Ticker) GetMidPrice() float64 {
 }
 
 func (t *Ticker) DateTime() time.Time {
+	t.Timestamp = "2020-05-01T00:00:00.6005284Z"
 	dateTime, err := time.Parse(time.RFC3339, t.Timestamp)
 	if err != nil {
 		log.Printf("action: DateTime, err=%s", err.Error())
